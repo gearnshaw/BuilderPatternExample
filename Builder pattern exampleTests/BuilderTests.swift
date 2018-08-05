@@ -63,4 +63,23 @@ extension BuilderTests {
         // then
         // Assert the user was authenticated
     }
+
+    func test_itShouldFailLogin_whenPasswordNotCorrect() {
+        // given
+        let userName = "test@example.com"
+        let password = "Not the right password"
+        let account = AccountBuilder()
+            .with(userName: userName)
+            .with(password: password)
+            .build()
+        let user = UserBuilder()
+            .with(account: account)
+            .build()
+
+        // when
+        // ...
+
+        // then
+        // Assert that login failed
+    }
 }
