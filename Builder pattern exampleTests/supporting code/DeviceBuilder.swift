@@ -15,15 +15,15 @@ class DeviceBuilder {
     private var name: String = "Device name"
     private var color: UIColor = UIColor.black
     private var lastSeen: Date? = nil
-    private var userId: String? = nil
+    private var user: User? = nil
 
     func makeActivated() -> DeviceBuilder {
-        self.userId = "Some user ID"
+        self.user = UserBuilder().build()
         return self
     }
 
     func makeUnactivated() -> DeviceBuilder {
-        self.userId = nil
+        self.user = nil
         return self
     }
 
@@ -47,8 +47,8 @@ class DeviceBuilder {
         return self
     }
 
-    func with(userId: String?) -> DeviceBuilder {
-        self.userId = userId
+    func with(user: User?) -> DeviceBuilder {
+        self.user = user
         return self
     }
 
@@ -57,6 +57,6 @@ class DeviceBuilder {
                       name: name,
                       color: color,
                       lastSeen: lastSeen,
-                      userId: userId)
+                      user: user)
     }
 }
