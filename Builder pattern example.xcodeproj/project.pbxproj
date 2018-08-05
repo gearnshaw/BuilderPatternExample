@@ -12,7 +12,11 @@
 		FADE39FD211724BB0011045F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADE39FB211724BB0011045F /* Main.storyboard */; };
 		FADE39FF211724BF0011045F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADE39FE211724BF0011045F /* Assets.xcassets */; };
 		FADE3A02211724BF0011045F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADE3A00211724BF0011045F /* LaunchScreen.storyboard */; };
-		FADE3A0D211724BF0011045F /* Builder_pattern_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A0C211724BF0011045F /* Builder_pattern_exampleTests.swift */; };
+		FADE3A1A211724ED0011045F /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A19211724ED0011045F /* Device.swift */; };
+		FADE3A1C211725270011045F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A1B211725270011045F /* User.swift */; };
+		FADE3A1E211725E70011045F /* DeviceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A1D211725E70011045F /* DeviceBuilder.swift */; };
+		FADE3A20211728B00011045F /* DeviceBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A1F211728B00011045F /* DeviceBuilderTests.swift */; };
+		FADE3A22211738740011045F /* DeviceNoBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A21211738740011045F /* DeviceNoBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +38,12 @@
 		FADE3A01211724BF0011045F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FADE3A03211724BF0011045F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FADE3A08211724BF0011045F /* Builder pattern exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Builder pattern exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FADE3A0C211724BF0011045F /* Builder_pattern_exampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder_pattern_exampleTests.swift; sourceTree = "<group>"; };
 		FADE3A0E211724BF0011045F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FADE3A19211724ED0011045F /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		FADE3A1B211725270011045F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FADE3A1D211725E70011045F /* DeviceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBuilder.swift; sourceTree = "<group>"; };
+		FADE3A1F211728B00011045F /* DeviceBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBuilderTests.swift; sourceTree = "<group>"; };
+		FADE3A21211738740011045F /* DeviceNoBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceNoBuilderTests.swift; path = "Builder pattern exampleTests/DeviceNoBuilderTests.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		FADE39F6211724BB0011045F /* Builder pattern example */ = {
 			isa = PBXGroup;
 			children = (
+				FADE3A18211724DF0011045F /* model */,
 				FADE39F7211724BB0011045F /* AppDelegate.swift */,
 				FADE39F9211724BB0011045F /* ViewController.swift */,
 				FADE39FB211724BB0011045F /* Main.storyboard */,
@@ -90,10 +99,29 @@
 		FADE3A0B211724BF0011045F /* Builder pattern exampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				FADE3A0C211724BF0011045F /* Builder_pattern_exampleTests.swift */,
+				FADE3A17211724CD0011045F /* supporting code */,
 				FADE3A0E211724BF0011045F /* Info.plist */,
+				FADE3A21211738740011045F /* DeviceNoBuilderTests.swift */,
+				FADE3A1F211728B00011045F /* DeviceBuilderTests.swift */,
 			);
 			path = "Builder pattern exampleTests";
+			sourceTree = "<group>";
+		};
+		FADE3A17211724CD0011045F /* supporting code */ = {
+			isa = PBXGroup;
+			children = (
+				FADE3A1D211725E70011045F /* DeviceBuilder.swift */,
+			);
+			path = "supporting code";
+			sourceTree = "<group>";
+		};
+		FADE3A18211724DF0011045F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FADE3A19211724ED0011045F /* Device.swift */,
+				FADE3A1B211725270011045F /* User.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FADE3A1C211725270011045F /* User.swift in Sources */,
+				FADE3A1A211724ED0011045F /* Device.swift in Sources */,
 				FADE39FA211724BB0011045F /* ViewController.swift in Sources */,
 				FADE39F8211724BB0011045F /* AppDelegate.swift in Sources */,
 			);
@@ -206,7 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FADE3A0D211724BF0011045F /* Builder_pattern_exampleTests.swift in Sources */,
+				FADE3A22211738740011045F /* DeviceNoBuilderTests.swift in Sources */,
+				FADE3A1E211725E70011045F /* DeviceBuilder.swift in Sources */,
+				FADE3A20211728B00011045F /* DeviceBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
