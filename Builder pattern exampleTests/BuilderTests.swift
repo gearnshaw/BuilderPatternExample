@@ -1,5 +1,5 @@
 //
-//  DeviceNoBuilderTests.swift
+//  BuilderTests.swift
 //  Builder pattern exampleTests
 //
 //  Created by Gabrielle Earnshaw on 05/08/2018.
@@ -9,26 +9,25 @@
 import XCTest
 @testable import Builder_pattern_example
 
-class DeviceNoBuilderTests: XCTestCase {
-
+class BuilderTests: XCTestCase {
+    
     override func setUp() {
         super.setUp()
     }
-
+    
     override func tearDown() {
         super.tearDown()
     }
 }
 
-extension DeviceNoBuilderTests {
+// MARK: - Communication of intent examples
+extension BuilderTests {
     func test_itShouldUseCorrectDeviceId_whenConnectionIsMade() {
         // given
         let expectedId = "abcde12345"
-        let device = Device(id: expectedId,
-                            name: "deviceName",
-                            color: UIColor.red,
-                            lastSeen: nil,
-                            userId: "skjf3874")
+        let device = DeviceBuilder()
+            .with(id: expectedId)
+            .build()
 
         // when
         // ...
@@ -39,16 +38,29 @@ extension DeviceNoBuilderTests {
 
     func test_itShouldConnectToDevice_whenDeviceIsActivated() {
         // given
-        let device = Device(id: "abc1234",
-                            name: "deviceName",
-                            color: UIColor.red,
-                            lastSeen: nil,
-                            userId: "skjf3874")
+        let device = DeviceBuilder()
+                        .makeActivated()
+                        .build()
 
         // when
         // ...
 
         // then
-        // Assert the connection code was calledfi
+        // Assert the connection code was called
+    }
+}
+
+// MARK: - Complex object graph examples
+extension BuilderTests {
+    func test_itShouldAuthenticate_whenUserLogsIn() {
+        // given
+        let user = UserBuilder()
+                    .build()
+
+        // when
+        // ...
+
+        // then
+        // Assert the user was authenticated
     }
 }

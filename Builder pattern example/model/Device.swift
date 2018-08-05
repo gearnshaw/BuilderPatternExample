@@ -17,6 +17,6 @@ struct Device {
     var userId: String?
 
     var isActivated: Bool {
-        return !(userId?.isEmpty ?? true)
+        return !(userId?.isEmpty ?? true) && lastSeen != nil
     }
 }

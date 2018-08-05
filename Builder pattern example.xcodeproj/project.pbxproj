@@ -15,8 +15,13 @@
 		FADE3A1A211724ED0011045F /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A19211724ED0011045F /* Device.swift */; };
 		FADE3A1C211725270011045F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A1B211725270011045F /* User.swift */; };
 		FADE3A1E211725E70011045F /* DeviceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A1D211725E70011045F /* DeviceBuilder.swift */; };
-		FADE3A20211728B00011045F /* DeviceBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A1F211728B00011045F /* DeviceBuilderTests.swift */; };
-		FADE3A22211738740011045F /* DeviceNoBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A21211738740011045F /* DeviceNoBuilderTests.swift */; };
+		FADE3A20211728B00011045F /* BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A1F211728B00011045F /* BuilderTests.swift */; };
+		FADE3A22211738740011045F /* NoBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A21211738740011045F /* NoBuilderTests.swift */; };
+		FADE3A24211757830011045F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A23211757830011045F /* Account.swift */; };
+		FADE3A26211758EF0011045F /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A25211758EF0011045F /* History.swift */; };
+		FADE3A28211759F50011045F /* HistoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A27211759F50011045F /* HistoryBuilder.swift */; };
+		FADE3A2A21175AA20011045F /* AccountBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A2921175AA20011045F /* AccountBuilder.swift */; };
+		FADE3A2C21175BBB0011045F /* UserBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE3A2B21175BBB0011045F /* UserBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +47,13 @@
 		FADE3A19211724ED0011045F /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		FADE3A1B211725270011045F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FADE3A1D211725E70011045F /* DeviceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBuilder.swift; sourceTree = "<group>"; };
-		FADE3A1F211728B00011045F /* DeviceBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBuilderTests.swift; sourceTree = "<group>"; };
-		FADE3A21211738740011045F /* DeviceNoBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceNoBuilderTests.swift; path = "Builder pattern exampleTests/DeviceNoBuilderTests.swift"; sourceTree = SOURCE_ROOT; };
+		FADE3A1F211728B00011045F /* BuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderTests.swift; sourceTree = "<group>"; };
+		FADE3A21211738740011045F /* NoBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoBuilderTests.swift; path = "Builder pattern exampleTests/NoBuilderTests.swift"; sourceTree = SOURCE_ROOT; };
+		FADE3A23211757830011045F /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		FADE3A25211758EF0011045F /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		FADE3A27211759F50011045F /* HistoryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryBuilder.swift; sourceTree = "<group>"; };
+		FADE3A2921175AA20011045F /* AccountBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBuilder.swift; sourceTree = "<group>"; };
+		FADE3A2B21175BBB0011045F /* UserBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +111,8 @@
 			children = (
 				FADE3A17211724CD0011045F /* supporting code */,
 				FADE3A0E211724BF0011045F /* Info.plist */,
-				FADE3A21211738740011045F /* DeviceNoBuilderTests.swift */,
-				FADE3A1F211728B00011045F /* DeviceBuilderTests.swift */,
+				FADE3A21211738740011045F /* NoBuilderTests.swift */,
+				FADE3A1F211728B00011045F /* BuilderTests.swift */,
 			);
 			path = "Builder pattern exampleTests";
 			sourceTree = "<group>";
@@ -111,6 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				FADE3A1D211725E70011045F /* DeviceBuilder.swift */,
+				FADE3A27211759F50011045F /* HistoryBuilder.swift */,
+				FADE3A2921175AA20011045F /* AccountBuilder.swift */,
+				FADE3A2B21175BBB0011045F /* UserBuilder.swift */,
 			);
 			path = "supporting code";
 			sourceTree = "<group>";
@@ -120,6 +133,8 @@
 			children = (
 				FADE3A19211724ED0011045F /* Device.swift */,
 				FADE3A1B211725270011045F /* User.swift */,
+				FADE3A23211757830011045F /* Account.swift */,
+				FADE3A25211758EF0011045F /* History.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -225,6 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FADE3A26211758EF0011045F /* History.swift in Sources */,
+				FADE3A24211757830011045F /* Account.swift in Sources */,
 				FADE3A1C211725270011045F /* User.swift in Sources */,
 				FADE3A1A211724ED0011045F /* Device.swift in Sources */,
 				FADE39FA211724BB0011045F /* ViewController.swift in Sources */,
@@ -236,9 +253,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FADE3A22211738740011045F /* DeviceNoBuilderTests.swift in Sources */,
+				FADE3A2A21175AA20011045F /* AccountBuilder.swift in Sources */,
+				FADE3A28211759F50011045F /* HistoryBuilder.swift in Sources */,
+				FADE3A2C21175BBB0011045F /* UserBuilder.swift in Sources */,
+				FADE3A22211738740011045F /* NoBuilderTests.swift in Sources */,
 				FADE3A1E211725E70011045F /* DeviceBuilder.swift in Sources */,
-				FADE3A20211728B00011045F /* DeviceBuilderTests.swift in Sources */,
+				FADE3A20211728B00011045F /* BuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
