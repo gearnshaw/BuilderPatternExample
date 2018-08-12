@@ -15,7 +15,7 @@ class DeviceBuilder {
     private var id: String = "Some ID"
     private var color: UIColor = UIColor.black
     private var lastSeen: Date? = nil
-    private var user: User? = nil
+    private var userId: String? = nil
 
     // MARK: - complex user set up in 'make' functions
     func makeActivated() -> DeviceBuilder {
@@ -46,8 +46,8 @@ class DeviceBuilder {
         return self
     }
 
-    func with(user: User?) -> DeviceBuilder {
-        self.user = user
+    func with(userId: String?) -> DeviceBuilder {
+        self.userId = userId
         return self
     }
 
@@ -56,6 +56,6 @@ class DeviceBuilder {
         return Device(id: id,
                       color: color,
                       lastSeen: lastSeen,
-                      user: user)
+                      userId: userId)
     }
 }
