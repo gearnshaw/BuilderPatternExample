@@ -11,29 +11,28 @@ import UIKit
 @testable import Builder_pattern_example
 
 class DeviceBuilder {
+    // MARK: - Private variables with default values
     private var id: String = "Some ID"
-    private var name: String = "Device name"
     private var color: UIColor = UIColor.black
     private var lastSeen: Date? = nil
     private var user: User? = nil
 
+    // MARK: - complex user set up in 'make' functions
     func makeActivated() -> DeviceBuilder {
         self.user = UserBuilder().build()
+        self.lastSeen = Date()
         return self
     }
 
     func makeUnactivated() -> DeviceBuilder {
         self.user = nil
+        self.lastSeen = nil
         return self
     }
 
+    // MARK: - 'with' functions to set individual field values
     func with(id: String) -> DeviceBuilder {
         self.id = id
-        return self
-    }
-
-    func with(name: String) -> DeviceBuilder {
-        self.name = name
         return self
     }
 
@@ -52,9 +51,9 @@ class DeviceBuilder {
         return self
     }
 
+    // MARK: - 'build' function that creates and returns a constructed object
     func build() -> Device {
         return Device(id: id,
-                      name: name,
                       color: color,
                       lastSeen: lastSeen,
                       user: user)

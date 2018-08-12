@@ -26,7 +26,6 @@ extension NoBuilderTests {
         // given
         let expectedId = "abcde12345"
         let device = Device(id: expectedId,
-                            name: "deviceName",
                             color: UIColor.red,
                             lastSeen: nil,
                             userId: "skjf3874")
@@ -41,7 +40,6 @@ extension NoBuilderTests {
     func test_itShouldConnectToDevice_whenDeviceIsActivated() {
         // given
         let device = Device(id: "abc1234",
-                            name: "deviceName",
                             color: UIColor.red,
                             lastSeen: nil,
                             userId: "skjf3874")

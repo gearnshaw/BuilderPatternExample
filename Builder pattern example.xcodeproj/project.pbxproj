@@ -120,10 +120,7 @@
 		FADE3A17211724CD0011045F /* supporting code */ = {
 			isa = PBXGroup;
 			children = (
-				FADE3A1D211725E70011045F /* DeviceBuilder.swift */,
-				FADE3A27211759F50011045F /* HistoryBuilder.swift */,
-				FADE3A2921175AA20011045F /* AccountBuilder.swift */,
-				FADE3A2B21175BBB0011045F /* UserBuilder.swift */,
+				FADE3A2E21207BB60011045F /* builders */,
 			);
 			path = "supporting code";
 			sourceTree = "<group>";
@@ -137,6 +134,17 @@
 				FADE3A25211758EF0011045F /* History.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		FADE3A2E21207BB60011045F /* builders */ = {
+			isa = PBXGroup;
+			children = (
+				FADE3A1D211725E70011045F /* DeviceBuilder.swift */,
+				FADE3A27211759F50011045F /* HistoryBuilder.swift */,
+				FADE3A2921175AA20011045F /* AccountBuilder.swift */,
+				FADE3A2B21175BBB0011045F /* UserBuilder.swift */,
+			);
+			path = builders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

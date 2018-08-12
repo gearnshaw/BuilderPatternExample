@@ -22,6 +22,18 @@ class BuilderTests: XCTestCase {
 
 // MARK: - Communication of intent examples
 extension BuilderTests {
+    func test_itShouldSendAlert_whenDeviceIsFound() {
+        // given
+        let device = DeviceBuilder()
+            .build()
+
+        // when
+        // ...
+
+        // then
+        // Assert that alert was sent
+    }
+
     func test_itShouldUseCorrectDeviceId_whenConnectionIsMade() {
         // given
         let expectedId = "abcde12345"

@@ -6,14 +6,12 @@
 //  Copyright © 2018 Gabrielle Earnshaw. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 struct Device {
     let id: String
-    let name: String
     let color: UIColor
-    var lastSeen: Date?
+    let lastSeen: Date?
     var user: User?
 
     var isActivated: Bool {
