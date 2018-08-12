@@ -19,13 +19,13 @@ class DeviceBuilder {
 
     // MARK: - complex user set up in 'make' functions
     func makeActivated() -> DeviceBuilder {
-        self.user = UserBuilder().build()
+        self.userId = "Some user id"
         self.lastSeen = Date()
         return self
     }
 
     func makeUnactivated() -> DeviceBuilder {
-        self.user = nil
+        self.userId = nil
         self.lastSeen = nil
         return self
     }
