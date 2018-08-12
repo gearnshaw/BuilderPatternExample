@@ -12,9 +12,9 @@ struct Device {
     let id: String
     let color: UIColor
     let lastSeen: Date?
-    var userId: String?
+    var user: User?
 
     var isActivated: Bool {
-        return userId != nil && lastSeen != nil
+        return user != nil && lastSeen != nil
     }
 }
