@@ -24,11 +24,10 @@ class NoBuilderTests: XCTestCase {
 extension NoBuilderTests {
     func test_itShouldUseCorrectDeviceId_whenConnectionIsMade() {
         // given
-        let expectedId = "abcde12345"
-        let device = Device(id: expectedId,
+        let device = Device(id: "abcde12345",
                             color: UIColor.red,
                             lastSeen: nil,
-                            userId: "skjf3874")
+                            user: nil)
 
         // when
         // ...
@@ -39,10 +38,21 @@ extension NoBuilderTests {
 
     func test_itShouldConnectToDevice_whenDeviceIsActivated() {
         // given
-        let device = Device(id: "abc1234",
+        let history = History(lastLoggedIn: Date(),
+                              averageMonthlyUse: 10.4,
+                              averageWeeklyUse: 2.6)
+        let account = Account(userName: "test@example.com",
+                              password: "password123",
+                              history: history)
+        let user = User(firstName: "Gabrielle",
+                        surname: "Earnshaw",
+                        age: 18,
+                        location: "Huddersfield",
+                        account: account)
+        let device = Device(id: "abcde12345",
                             color: UIColor.red,
-                            lastSeen: nil,
-                            userId: "skjf3874")
+                            lastSeen: Date(),
+                            user: user)
 
         // when
         // ...
